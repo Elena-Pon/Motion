@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Motion</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,900" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+	<link rel="manifest" href="img/favicons/site.webmanifest">
+	<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="img/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="img/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="logo">
+				<a href="#"><img src="img/logo.svg"></a>
+			</div>
+			<div class="nav">
+				<div  class="menu">
+				<a class="nav-link link-active" href="#">Main</a>
+				<a class="nav-link"href="#">About Us</a>
+				<a class="nav-link" href="#">Portfolio</a>
+				<a class="nav-link" href="#">Contacts</a>
+				</div>
+				<form class="nav-link form-nav">
+					<input class="search" type="text">
+					<button class="icon" type="button"></button>
+					<button class="menu-button" type="button"></button>
+				</form>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section class="hero">
+			<div class="container container-hero">
+				<div class="hero-content">
+					<h1>We Create Videographics To Communicate Your Data</h1>
+					<p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda quae, similique necessitatibus eos illum numquam.</p>
+					<a href="#">Contact Us</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="present">
+			<div class="container container-present">
+				<div class="present__left">
+					<p class="left-text">Spillt is a Motion Design & Animation Agency</p>
+				</div>
+				<div class="present__right">
+					<p class="right-text">We are a group of seasoned professionals determined to engage with your team and extend your message to the broadest possible audience. We’ll strategize to identify the right tactic for the campaign, then seamlessly execute the project as if we are part of your internal staff.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="services">
+			<div class="container">
+				<h2>Our services</h2>
+				<div class="item-list">
+					<div class="item">
+						<div class="item-product">
+							<img src="img/lucas-benjamin-1139779-unsplash.jpg" alt="akvarel">
+							<h3>Motion design</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil ea reiciendis minima quam, a eos. Fugit voluptates consectetur libero temporibus quis.</p>
+						</div>
+							<a href="#">More</a>
+					</div>
+
+					<div class="item">
+						<div class="item-product">
+							<img src="img/photo-1486693128850-a77436e7ba3c.jpg" alt="blog">
+							<h3>Video processing</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil ea reiciendis minima quam, a eos.</p>
+						</div>
+							<a href="#">More</a>
+					</div>
+
+					<div class="item">
+						<div class="item-product">
+							<img src="img/dose-media-650563-unsplash.jpg" alt="media">
+							<h3>Post amimation</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil ea reiciendis minima quam, a eos. Fugit voluptates consectetur libero temporibus quis.</p>
+						</div>
+							<a href="#">More</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				<h2 class="content-form">Discuss your project with us</h2>
+				<form class="form-1" action="#">
+					<input type="text" name="Name" placeholder="Name">
+					<input type="text" name="E-mail" placeholder="E-mail">
+					<textarea placeholder="Hi! I'd like to work with you."></textarea>
+					<button type="button">Send message</button>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="container container-footer">
+			<div class="footer-left">
+				<p class="footer-text"><strong>Motion</strong> | Handcrafted with &hearts;<br>&copy; 2011-2018</p>
+			</div>
+			<div class="footer-right">
+				<a class="social-link link-facebook" href=""></a>
+				<a class="social-link link-in" href=""></a>
+				<a class="social-link link-instagram" href=""></a>
+			</div>
+		</div>
+	</footer>
+
+	<button class="arrow_up"></button>
+
+	<script type="text/javascript">
+
+		$(".icon").on("click", function(){
+		$ (".search").toggleClass("search-active");
+		});
+		
+		$(".menu-button").on("click", function(){
+		$ (".menu-button").toggleClass("active");
+		});
+
+		$(".menu-button").on("click", function(){
+		$ (".menu").toggleClass("menu-active");
+		});
+
+		$(".arrow_up").on("click", function(){
+			$("html, body").animate({
+				scrollTop:0
+			}, 600);
+		});
+
+
+		$(window).on("scroll", function(){
+			
+			// $("html")[0].scrollTop
+			// $("html").get(0).scrollTop
+			var scrollValue = $("html").scrollTop();
+			if(scrollValue > 200){
+				$(".arrow_up").fadeIn();
+			} else {
+				$(".arrow_up").fadeOut();
+			}
+			// console.log(scrollValue);
+		});
+
+
+
+
+	</script>
+
+
+	
+</body>
+</html>
